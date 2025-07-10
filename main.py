@@ -62,8 +62,12 @@ async def Normal(ctx, article: discord.Option(str, name="문서명", description
     except discord.NotFound:
         await ctx.respond("마작위키 서버에 참여하셔야 명령어를 사용할 수 있습니다.", ephemeral=True)
         return
-    print(guildUser.roles) #debug
-    if 1392684765068394698 in guildUser.roles:
+    userVerified = False
+    for userRole in guildUser.roles:
+        if userRole.id == 1392684765068394698:
+            userVerified = True
+            break
+    if userVerified:
         normalForum = bot.get_channel(1392690787447214130)
         newThread = await normalForum.create_thread(
         name=f"{article} - {reason}",
