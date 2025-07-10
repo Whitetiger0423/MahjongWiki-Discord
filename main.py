@@ -62,7 +62,7 @@ async def Normal(ctx, article: discord.Option(str, name="문서명", description
     except discord.NotFound:
         await ctx.respond("당신은 대상 서버에 참여하고 있지 않습니다.", ephemeral=True)
         return
-    if 1392684765068394698 in guildUser.roles.id:
+    if 1392684765068394698 in guildUser.roles:
         normalForum = bot.get_channel(1392690787447214130)
         newThread = await normalForum.create_thread(
         name=f"{article} - {reason}",
