@@ -1,0 +1,25 @@
+# Cache
+**/__pycache__
+
+# IDE
+.vscode/
+.idea/
+.fleet/
+
+# Database
+*.xml
+*.db
+
+# Virtual Environments
+.venv/
+venv/
+.env/
+env/
+
+# Environments
+.env
+
+# etc
+.DS_Store
+._*
+docker-compose.yml
