@@ -60,8 +60,9 @@ async def Normal(ctx, article: discord.Option(str, name="문서명", description
     try:
         guildUser = await wikiGuild.fetch_member(ctx.author.id)
     except discord.NotFound:
-        await ctx.respond("당신은 대상 서버에 참여하고 있지 않습니다.", ephemeral=True)
+        await ctx.respond("마작위키 서버에 참여하셔야 명령어를 사용할 수 있습니다.", ephemeral=True)
         return
+    print(guildUser.roles) #debug
     if 1392684765068394698 in guildUser.roles:
         normalForum = bot.get_channel(1392690787447214130)
         newThread = await normalForum.create_thread(
