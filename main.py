@@ -25,7 +25,7 @@ logger = logging.getLogger("main")
 EmbedColor = {"default": 0xDADADA, "success": 0x77DADA, "error": 0xB32424}
 
 # slash command group 지정
-debate = bot.slash_command_group("토론", "토론 포스트를 생성하는 명령어입니다.")
+debate = bot.create_group("토론", "토론 포스트를 생성하는 명령어입니다.")
 
 # 시작 시간 기록
 bot.start_time = time.time()
