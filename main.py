@@ -71,9 +71,10 @@ async def Normal(ctx, article: discord.Option(str, name="문서명", description
         normalForum = bot.get_channel(1392690787447214130)
         newThread = await normalForum.create_thread(
         name=f"{article} - {reason}",
-        content=f"발제자: <@{ctx.user.id}>\n문서의 최상단 분류 아래에 ```[include (틀:디스코드 토론,url={newThread.jump_url})]```을 삽입해주세요."
+        content=f"발제자: <@{ctx.user.id}>"
         )
         await ctx.respond(f"{newThread.jump_url} 토론이 생성되었습니다!")
+        await newThread.starting_message.edit(content=f"발제자: <@{ctx.user.id}>\n\n문서의 최상단 분류 아래에 `[include (틀:디스코드 토론,url={newThread.jump_url})]`을 삽입해주세요.")
     else:
         await ctx.respond("마작위키 계정이 인증되지 않았습니다. <#1392679551825346633>에서 인증을 진행해주시고, 이미 인증 요청을 했다면 잠시 기다려주세요.", ephemeral=True)
 
