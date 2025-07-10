@@ -80,7 +80,7 @@ async def Normal(ctx, article: discord.Option(str, name="문서명", description
 
 
 @debate.command(name="질의응답", description=("질의응답 포스트를 생성합니다."))
-async def QnA(ctx, title: discord.Option(str, name="제목", description="포스트 제목을 작성해주세요."), questions: discord.Option(str, name="질문 내용", description="질문할 내용을 적어주세요.")):
+async def QnA(ctx, title: discord.Option(str, name="제목", description="포스트 제목을 작성해주세요."), questions: discord.Option(str, name="질문내용", description="질문할 내용을 적어주세요.")):
     wikiGuild = bot.get_guild(1392679550730637382)
     try:
         guildUser = await wikiGuild.fetch_member(ctx.author.id)
