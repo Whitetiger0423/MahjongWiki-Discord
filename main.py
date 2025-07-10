@@ -54,7 +54,7 @@ async def Ping(ctx):
     await ctx.respond(embed=embed)
 
 
-@debate.command(name="보통문서", description=("보통문서에 관한 토론 포스트를 생성합니다.")
+@debate.command(name="보통문서", description=("보통문서에 관한 토론 포스트를 생성합니다."))
 async def Normal(ctx, article: discord.Option(str, name="문서명", description="토론 대상이 되는 문서 이름을 작성해주세요."), reason: discord.Option(str, name="발제이유", description="발제하는 이유를 5글자 안팎으로 간단하게 요약해서 적어주세요.")):
     wikiGuild = bot.get_guild(1392679550730637382)
     try:
