@@ -1,8 +1,12 @@
-# PycordTemplate
+# MahjongWiki-Discord
 
-0. "Use this template"
-0. `$ git clone https://github.com/Whitetiger0423/<ProjectName>.git`
-1. `$ pip install -r requirements.txt`
-2. `$ cp example.env .env`
-3. `$ nano .env` (use any text editor you want) / Enter your bot token.
-4. run!
+[마작위키](https://jum.al/mj)의 [공식 디스코드 서버](https://jum.al/mj/마작위키:디스코드%20서버)에서 포럼 포스트를 관리하기 위한 목적으로 만들어진 봇입니다.
+
+| 그룹 | 기능 | 설명 |
+| -- | -- | -- |
+| 토론 | 보통문서 | 보통문서 포럼에 포스트를 생성합니다. |
+| 토론 | 질의응답 | 질의응답/건의 포럼에 포스트를 생성합니다. |
+| 토론 | 창작문서 | 창작문서 편집 포럼에 포스트를 생성합니다. |
+| 토론 | 창작검토 | 창작문서 검토 포럼에 포스트를 생성합니다. |
+
+추후 서버 운영에 추가적인 기능이 필요해진다면 더 많은 기능이 내장될 예정입니다.
